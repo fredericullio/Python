@@ -212,7 +212,6 @@ class BlackJack:
                     break
                 else:
                     print("Please, answer Y or N.")
-                    continue
     
     def bj_check(self):
         if self.dealer.total == 21:
@@ -279,7 +278,6 @@ D to double down or X to surrender for your hand nr {player.hands.index(hand)+1}
 
                             else:
                                 print("Please, answer H or S.")
-                                continue
                         else:       
                             if hand.total > 21:
                                 self.statement += f"\n{player.name.upper()}'S HAND NR \
@@ -315,7 +313,6 @@ HAND NR {player.hands.index(hand)+1} HAS GONE BUST!"
                                 choosing = False
                         else:
                             print(f"{player.name}, sorry, your account balance doesn't allow to double down.")
-                            continue
 
                     elif choice == "X":
                         player.add(hand.bet/2)
@@ -325,7 +322,6 @@ HAND NR {player.hands.index(hand)+1} HAS GONE BUST!"
 
                     else:
                         print("Please, enter valid input.")
-                        continue
 
             
     def dealers_turn(self):
@@ -410,7 +406,6 @@ HAND NR {player.hands.index(hand)+1} HAS GONE BUST!"
                             break
                         else:
                             print("Please, answer Y or N.")
-                            continue
                 else:
                     print("Sorry, your account balance reached 0. Thanks for playing!")
                     self.players.remove(player)
