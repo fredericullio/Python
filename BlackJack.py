@@ -402,7 +402,7 @@ HAND NR {player.hands.index(hand)+1} HAS GONE BUST!"
                             break
                         elif answer == "N":
                             print(f"Thanks for playing, {player.name}!")
-                            self.players.remove(player)
+                            self.players = [x for x in self.players if x is not player]
                             break
                         else:
                             print("Please, answer Y or N.")
